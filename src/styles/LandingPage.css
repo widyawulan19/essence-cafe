@@ -1776,6 +1776,10 @@ MEDIA QUERY (BREAK POINT)
         width: 100%;
     }
 
+    .footer2 .menu {
+        width: 100%;
+    }
+
     .footer1 p {
         text-align: center;
         font-size: 12px;
@@ -1877,4 +1881,14 @@ MEDIA QUERY (BREAK POINT)
         width: 100%;
     }
 
+
+    .operating-container .oc-left {
+        padding: 10px 15px;
+    }
+
+    .oc-left h5,
+    .oc-left h2 {
+        width: 100%;
+        text-align: center;
+    }
 }
