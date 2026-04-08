@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "image": "/images/gallery/interior1.jpg"
+    },
+    {
+        "id": 2,
+        "image": "/images/gallery/latte-art.jpg"
+    },
+    {
+        "id": 3,
+        "image": "/images/gallery/outdoor.jpg"
+    }
+]

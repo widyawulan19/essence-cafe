@@ -1,0 +1,194 @@
+.confirmation-container {
+    width: 100%;
+    position: relative;
+    /* background-color: #fff; */
+}
+
+.confir-nav {
+    width: 100%;
+    height: fit-content;
+    border-bottom: 1px solid var(--border-soft);
+    background: #fff;
+    /* box-shadow: var(--shadow-hover); */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confir-nav img {
+    height: 42px;
+}
+
+.confir-main {
+    width: 100%;
+    height: 100%;
+    padding: 70px;
+    background-color: white;
+
+    text-align: center;
+}
+
+.confir-icon {
+    margin-bottom: 20px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-icon {
+    color: var(--accent);
+    border-radius: 50%;
+    padding: 30px;
+    font-size: 68px;
+
+    background-color: white;
+    box-shadow: var(--shadow-hover);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =======================
+CONFIR TEXT
+======================= */
+.confir-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.confir-text p {
+    font-weight: bold;
+    font-size: 12px;
+    color: #000;
+    padding: 0px;
+}
+
+.confir-text .text-p {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin: 10px 0px;
+    width: 60%;
+}
+
+.confir-text h3 {
+    font-family: var(--text-lora);
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.confir-info {
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.confir-info button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    width: 15vw;
+    padding: 15px 10px;
+    background-color: var(--bg-main);
+    color: #fff;
+    border: none;
+    border-radius: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.confir-info .btn-icon {
+    color: var(--accent);
+    font-size: 20px;
+}
+
+.confir-info span {
+    color: var(--text-secondary);
+    padding: 0px;
+    margin: 0px;
+}
+
+.confir-info p {
+    padding: 0px;
+    margin: 0px;
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.confir-btn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.confir-btn button {
+    /* width: 15vw; */
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    gap: 10px;
+
+    background: var(--primary-btn);
+    color: #fff;
+    border: none;
+    border-radius: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confir-btn p {
+    font-style: italic;
+    font-size: 12px;
+    /* font-weight: bold; */
+    color: var(--text-secondary);
+    margin-top: 5px;
+}
+
+/* =======================
+FOOTER
+======================= */
+.confir-footer {
+    /* border: 1px solid red; */
+}
+
+/* =======================
+MODAL RECEIPT
+======================= */
+.modal-receipt {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+    width: 100%;
+    /* height: 100%; */
+    background-color: #00000084;
+    padding: 30px;
+
+    display: flex;
+    justify-content: center;
+}

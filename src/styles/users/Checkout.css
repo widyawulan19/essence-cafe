@@ -1,0 +1,444 @@
+.checkout-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-navbar {
+    width: 100%;
+    height: fit-content;
+    border-bottom: 1px solid var(--border-soft);
+    background: #fff;
+    box-shadow: var(--shadow-hover);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkout-navbar img {
+    height: 42px;
+}
+
+
+/* =======================
+CHECKOUT CONTENT (MAIN)
+======================= */
+.checkout-content {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.content-left {
+    width: 100%;
+    /* max-width: 600px; */
+    margin: 0 auto;
+    font-family: "Inter", sans-serif;
+    color: #1f2937;
+
+    /* background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft); */
+    padding: 30px;
+}
+
+/* BACK NAV */
+.back-nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #6b7280;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/* TEXT HEADER */
+.text h4 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.text p {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+/* USER INFO */
+.user-info {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.user-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-box label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.user-box1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 12px 14px;
+    background: #f9fafb;
+}
+
+.user-box1 input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* PICKUP */
+.pickup-box {
+    margin-bottom: 30px;
+    background-color: #fff;
+}
+
+.pickup-label {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.pickup-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.pickup-options button {
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.pickup-options button:hover {
+    background: #f3f4f6;
+}
+
+.pickup-options button.active {
+    background: #111827;
+    color: white;
+    border: none;
+}
+
+.pickup-info {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* GUARANTEE NOTE */
+.guaranty-note {
+    display: flex;
+    gap: 14px;
+    background: #fef3e7;
+    padding: 16px;
+    border-radius: 14px;
+    align-items: flex-start;
+}
+
+.note-icon {
+    background: #fde7cf;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+}
+
+.note-text h5 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.note-text p {
+    margin-top: 4px;
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.4;
+}
+
+/* .content-left {
+    height: 95%;
+    width: 100%;
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.text h4 {
+    font-family: "Lora", serif;
+    font-weight: bolder;
+    font-optical-sizing: auto;
+} */
+
+/* =======================
+CONTENT RIGHT (ORDER SUMMARY)
+======================= */
+
+.content-right {
+    /* flex: 1; */
+    background: #f5efe6;
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 95%;
+}
+
+.content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    /* border: 1px solid blue; */
+}
+
+.content-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    /* border: 1px solid green; */
+}
+
+.content-header h4 {
+    font-family: "Lora", serif;
+    font-weight: bolder;
+    font-optical-sizing: auto;
+    font-size: 20px;
+}
+
+.content-header p {
+    font-family: var(--text-desc);
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--text-primary);
+    padding: 5px 10px;
+    /* border: 1px solid var(--border-soft); */
+    border-radius: 12px;
+    /* background-color: var(--accent); */
+}
+
+.main-content {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 37vh;
+    gap: 5px;
+    overflow-y: auto;
+}
+
+.main-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-soft);
+    border-radius: 8px;
+    padding: 5px;
+
+    /* border: 1px solid blue; */
+}
+
+.box-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.content-box img {
+    width: 40px;
+    height: 50px;
+}
+
+.content-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-info h4 {
+    font-family: "Lora", serif;
+    font-weight: 600;
+    font-size: 14px;
+    font-style: normal;
+    font-optical-sizing: auto;
+    margin: 0px;
+    padding: 0px;
+}
+
+.content-info span {
+    font-family: var(--text-desc);
+    font-size: 12px;
+    color: var(--text-secondary);
+    padding: 0;
+
+}
+
+.content-qty p {
+    font-family: var(--text-desc);
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+    margin-right: 10px;
+}
+
+/* =======================
+BOX DETAIL PRICE
+======================= */
+
+.box-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: auto;
+    /* border: 1px solid blue; */
+    width: 100%;
+}
+
+.detail-label p {
+    font-family: var(--text-desc);
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--text-primary);
+}
+
+.detail-isi p {
+    font-family: var(--text-desc);
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+}
+
+.final-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 0px;
+    border-top: 1px solid var(--border-soft);
+    width: 100%;
+}
+
+.final-total p {
+    font-family: var(--text-desc);
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    padding: 0px;
+}
+
+.final-total .total-amount {
+    font-size: 18px;
+    color: var(--accent);
+}
+
+.order-btn {
+    background: linear-gradient(135deg, #d97706, #ea580c);
+    border-radius: 999px;
+    padding: 16px 30px;
+    font-size: 18px;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.order-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.order-text {
+    font-family: var(--text-desc);
+    font-size: 10px;
+    color: var(--text-secondary);
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* =======================
+CHECKOUT FOOTER
+======================= */
+.checkout-footer {
+    width: 100%;
+    padding: 20px 50px;
+    background-color: var(--bg-main);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btm-left,
+.btm-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    /* border: 1px solid red; */
+}
+
+.btm-left p {
+    font-family: var(--text-desc);
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.btm-right p {
+    font-family: var(--text-desc);
+    font-size: 12px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin: 0px 5px;
+}

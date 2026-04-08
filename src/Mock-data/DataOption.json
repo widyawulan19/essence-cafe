@@ -1,0 +1,165 @@
+[
+    {
+        "id": 1,
+        "optional_name": "Size",
+        "type": "multiple",
+        "applicable_to": [
+            "coffee",
+            "avogato",
+            "fruity",
+            "seasoning",
+            "smoothies"
+        ],
+        "optional_menu": [
+            {
+                "id": 1,
+                "name": "Small",
+                "price": 0
+            },
+            {
+                "id": 2,
+                "name": "Medium",
+                "price": 0
+            },
+            {
+                "id": 3,
+                "name": "Large",
+                "price": 7000
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "optional_name": "Sugar",
+        "type": "multiple",
+        "applicable_to": [
+            "coffee",
+            "avogato",
+            "fruity",
+            "seasoning",
+            "smoothies"
+        ],
+        "optional_menu": [
+            {
+                "id": 1,
+                "name": "No Sugar",
+                "price": 0
+            },
+            {
+                "id": 2,
+                "name": "Less Sugar",
+                "price": 0
+            },
+            {
+                "id": 3,
+                "name": "Normal",
+                "price": 0
+            },
+            {
+                "id": 4,
+                "name": "Extra Sugar",
+                "price": 7000
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "optional_name": "Ice",
+        "type": "multiple",
+        "applicable_to": [
+            "coffee",
+            "fruity",
+            "seasoning",
+            "smoothies"
+        ],
+        "optional_menu": [
+            {
+                "id": 1,
+                "name": "No Ice",
+                "price": 0
+            },
+            {
+                "id": 2,
+                "name": "Less Ice",
+                "price": 0
+            },
+            {
+                "id": 3,
+                "name": "Normal Ice",
+                "price": 0
+            },
+            {
+                "id": 4,
+                "name": "Extra Ice",
+                "price": 5000
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "optional_name": "Milk",
+        "type": "multiple",
+        "applicable_to": [
+            "coffee",
+            "avogato",
+            "seasoning"
+        ],
+        "optional_menu": [
+            {
+                "id": 1,
+                "name": "Full Cream",
+                "price": 0
+            },
+            {
+                "id": 2,
+                "name": "Oat Milk",
+                "price": 8000
+            },
+            {
+                "id": 3,
+                "name": "Almond Milk",
+                "price": 8000
+            },
+            {
+                "id": 4,
+                "name": "Soy Milk",
+                "price": 8000
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "optional_name": "Extra",
+        "type": "multiple",
+        "applicable_to": [
+            "coffee"
+        ],
+        "optional_menu": [
+            {
+                "id": 1,
+                "name": "Extra shot espresso",
+                "price": 4000
+            },
+            {
+                "id": 2,
+                "name": "Whipped cream",
+                "price": 5000
+            },
+            {
+                "id": 3,
+                "name": "Caramel Syrup",
+                "price": 5000
+            },
+            {
+                "id": 4,
+                "name": "Vanilla Syrup",
+                "price": 5000
+            },
+            {
+                "id": 5,
+                "name": "Chocolate Sauce",
+                "price": 5000
+            }
+        ]
+    }
+]

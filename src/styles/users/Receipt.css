@@ -1,0 +1,270 @@
+.receipt-container {
+    /* border: 1px solid red; */
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #FBEFDF;
+
+    width: 30%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.receipt-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dfb496;
+}
+
+
+.header-icon {
+    border: 1px solid var(--accent);
+    background-color: var(--accent);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.receipt-header h4 {
+    font-size: 18px;
+    color: var(--text-primary);
+    font-weight: bold;
+    /* font-family: var(--text-lora); */
+    margin: 3px 0px;
+}
+
+.receipt-header p {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin: 0px;
+    padding: 0;
+    line-height: 1.2;
+}
+
+/* =======================
+RECEIPT CONTENT
+======================= */
+.receipt-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px 0px;
+    border-bottom: 1px dashed #dfb496;
+}
+
+.order-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.order-row .value {
+    font-weight: 500;
+    color: #000;
+}
+
+.order-row .value-semi {
+    font-weight: normal;
+    color: #000;
+}
+
+.value-accent {
+    font-weight: bold;
+    color: var(--accent);
+    font-size: 14px;
+}
+
+/* =======================
+RECEIPT DETAILS
+======================= */
+.receipt-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px 0px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #dfb496;
+}
+
+.label-bold,
+.value-bold {
+    font-weight: bold;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+
+.label-box {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: flex-start;
+}
+
+.label-box .label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.label-box .value {
+    font-size: 11px;
+    font-weight: normal;
+    color: var(--text-secondary);
+    width: 100%;
+    line-height: 1;
+}
+
+.order-row .price-bold {
+    font-size: 12px;
+    font-weight: 500;
+    color: #000;
+    line-height: 1;
+    height: 100%;
+}
+
+/* =======================
+RECEIPT TOTAL
+======================= */
+.receipt-total {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 15px 0px;
+}
+
+.order-row .voucer {
+    color: red;
+}
+
+/* =======================
+GRANDTOTAL
+======================= */
+.receipt-grandtotal {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.receipt-grandtotal .order-row {
+    font-size: 14px;
+    color: var(--text-primary);
+    width: 90%;
+    padding: 10px 20px;
+    border-radius: 6px;
+    /* border: 1px solid #ffffff78; */
+    background-color: #ffffff78;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.receipt-grandtotal .grand-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+.receipt-grandtotal .grand-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+/* =======================
+RECEIPT FOOTER
+======================= */
+.receipt-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.barcode-icon {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #dfb496;
+    color: #000;
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.receipt-footer span {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--text-secondary);
+    margin: 0px;
+    padding: 0;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.receipt-footer .text {
+    font-style: italic;
+    color: var(--accent);
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.receipt-footer p {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin: 0px;
+    padding: 0;
+    line-height: 0.8;
+    text-align: center;
+}
+
+/* =======================
+RECEIPT BTN
+======================= */
+.receipt-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.receipt-btn button {
+    padding: 10px 15px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background: var(--primary-btn);
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+
+    gap: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.receipt-btn button:hover {
+    background: var(--primary-btn-hover);
+}

@@ -1,0 +1,156 @@
+coffee-app/
+│
+├─ public/
+│   ├─ favicon.ico
+│   └─ index.html
+│
+├─ src/
+│   │
+│   ├─ assets/
+│   │   ├─ images/
+│   │   │   ├─ menu/
+│   │   │   ├─ gallery/
+│   │   │   └─ hero/
+│   │   └─ icons/
+│   │
+│   ├─ components/
+│   │   ├─ common/
+│   │   │   ├─ Button.jsx
+│   │   │   ├─ Card.jsx
+│   │   │   ├─ Input.jsx
+│   │   │   └─ Modal.jsx
+│   │   │
+│   │   ├─ layout/
+│   │   │   ├─ Navbar.jsx
+│   │   │   ├─ Footer.jsx
+│   │   │   └─ Container.jsx
+│   │   │
+│   │   ├─ menu/
+│   │   │   ├─ MenuCard.jsx
+│   │   │   ├─ MenuFilter.jsx
+│   │   │   └─ CartDrawer.jsx
+│   │   │
+│   │   └─ checkout/
+│   │       └─ CheckoutForm.jsx
+│   │
+│   ├─ pages/
+│   │   ├─ Landing/
+│   │   │   └─ LandingPage.jsx
+│   │   │
+│   │   ├─ Menu/
+│   │   │   └─ MenuPage.jsx
+│   │   │
+│   │   ├─ Checkout/
+│   │   │   └─ CheckoutPage.jsx
+│   │   │
+│   │   ├─ Gallery/
+│   │   │   └─ GalleryPage.jsx
+│   │   │
+│   │   └─ Admin/
+│   │       ├─ Dashboard.jsx
+│   │       ├─ MenuAdmin.jsx
+│   │       ├─ PromoAdmin.jsx
+│   │       ├─ GalleryAdmin.jsx
+│   │       └─ CategoryAdmin.jsx
+│   │
+│   ├─ data/          (dummy data reusable)
+│   │   ├─ menu.json
+│   │   ├─ promo.json
+│   │   └─ gallery.json
+│   │
+│   ├─ hooks/
+│   │   └─ useCart.js
+│   │
+│   ├─ utils/
+│   │   ├─ formatCurrency.js
+│   │   └─ generateWhatsAppMessage.js
+│   │
+│   ├─ styles/
+│   │   ├─ index.css
+│   │   ├─ variables.css
+│   │   └─ components/
+│   │
+│   ├─ routes/
+│   │   └─ AppRoutes.jsx
+│   │
+│   ├─ App.jsx
+│   └─ index.js
+│
+└─ package.json
+
+
+
+
+STATIC DATA BACKEND
+🗄 Database Tables (Production)
+categories
+
+id
+
+name
+
+menu
+
+id
+
+name
+
+description
+
+price
+
+image
+
+category_id
+
+tag
+
+is_active
+
+promo
+
+id
+
+title
+
+description
+
+banner
+
+start_date
+
+end_date
+
+is_active
+
+gallery
+
+id
+
+image
+
+orders
+
+id
+
+customer_name
+
+whatsapp_number
+
+pickup_time
+
+total_price
+
+status
+
+order_items
+
+id
+
+order_id
+
+menu_id
+
+quantity
+
+price

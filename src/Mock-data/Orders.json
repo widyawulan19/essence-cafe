@@ -1,0 +1,24 @@
+[
+    {
+        "id": 101,
+        "customer_name": "Andi",
+        "whatsapp_number": "08123456789",
+        "pickup_time": "19:00",
+        "total_price": 75000,
+        "status": "PENDING",
+        "items": [
+            {
+                "menu_id": 1,
+                "name": "Cappuccino",
+                "quantity": 2,
+                "price": 28000
+            },
+            {
+                "menu_id": 3,
+                "name": "Croissant",
+                "quantity": 1,
+                "price": 22000
+            }
+        ]
+    }
+]

@@ -1,0 +1,400 @@
+[
+    {
+        "id": 1,
+        "name": "coffee",
+        "sub": "Signature Collection",
+        "desc": "Experience the richness of expertly brewed coffee crafted from ethically sourced beans. Each cup is roasted in small batches to deliver a smooth, balanced, and unforgettable flavor in every sip.",
+        "categories": [
+            {
+                "id": 1,
+                "categori_id": 1,
+                "name": "Aren Latte",
+                "description": "Smooth espresso blended with fresh milk and natural palm sugar for a sweet and creamy traditional taste.",
+                "img": "../assets/ice_coffee/aren_latte.png",
+                "price": 28000,
+                "available": true,
+                "badges": [
+                    "popular"
+                ]
+            },
+            {
+                "id": 2,
+                "categori_id": 1,
+                "name": "Avocado Latte",
+                "description": "Creamy avocado combined with rich espresso and milk, creating a smooth and unique tropical coffee flavor.",
+                "img": "../assets/ice_coffee/avocado_latte.png",
+                "price": 23000,
+                "available": true,
+                "badges": [
+                    "popular"
+                ]
+            },
+            {
+                "id": 3,
+                "categori_id": 1,
+                "name": "Caramel Latte",
+                "description": "Classic latte mixed with sweet caramel syrup and topped with smooth milk foam.",
+                "img": "../assets/ice_coffee/caramel_latte.png",
+                "price": 30000,
+                "available": true,
+                "badges": []
+            },
+            {
+                "id": 4,
+                "categori_id": 1,
+                "name": "Dark Mokha",
+                "description": "Strong espresso blended with dark chocolate for a bold and rich coffee experience.",
+                "img": "../assets/ice_coffee/dark_mokka.png",
+                "price": 32000,
+                "available": true,
+                "badges": []
+            },
+            {
+                "id": 5,
+                "categori_id": 1,
+                "name": "Latte",
+                "description": "Smooth espresso combined with steamed milk for a creamy and balanced classic coffee.",
+                "img": "../assets/ice_coffee/latte.png",
+                "price": 28000,
+                "available": true,
+                "badges": []
+            },
+            {
+                "id": 6,
+                "categori_id": 1,
+                "name": "White Mokha",
+                "description": "Sweet white chocolate mixed with espresso and milk for a soft and creamy flavor.",
+                "img": "../assets/ice_coffee/white_mocca.png",
+                "price": 31000,
+                "available": true,
+                "badges": []
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "avogato",
+        "sub": "Sweet Indulgence",
+        "desc": "A perfect harmony of bold espresso and creamy indulgence. Our affogato selection brings together hot and cold sensations, creating a luxurious dessert experience in every spoonful.",
+        "categories": [
+            {
+                "id": 1,
+                "categori_id": 2,
+                "name": "Caramel Affogato",
+                "description": "Vanilla ice cream topped with hot espresso and caramel sauce for a sweet and bold dessert coffee.",
+                "img": "../assets/avogato/caramel-affogato.png",
+                "price": 36000,
+                "available": true,
+                "badges": []
+            },
+            {
+                "id": 2,
+                "categori_id": 2,
+                "name": "Classic Affogato",
+                "description": "A scoop of vanilla ice cream served with a shot of hot espresso for a perfect hot and cold combination.",
+                "img": "../assets/avogato/classic-affogato.png",
+                "price": 34000,
+                "available": true,
+                "badges": []
+            },
+            {
+                "id": 3,
+                "categori_id": 2,
+                "name": "Mocha Affogato",
+                "description": "Chocolate ice cream topped with espresso for a rich and creamy dessert coffee.",
+                "img": "../assets/avogato/mocha-affogato.png",
+                "price": 37000,
+                "available": true,
+                "badges": []
+            },
+            {
+                "id": 4,
+                "categori_id": 2,
+                "name": "Pistachio Affogato",
+                "description": "Pistachio ice cream poured with hot espresso, creating a nutty, sweet, and bold flavor.",
+                "img": "../assets/avogato/pistachio-affogato.png",
+                "price": 38000,
+                "available": true,
+                "badges": [
+                    "new"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "fruity",
+        "sub": "Refreshing Creations",
+        "desc": "Bright, vibrant, and refreshing—our fruity coffee blends combine bold espresso with natural fruit flavors, delivering a unique twist that’s both energizing and delightfully refreshing.",
+        "categories": [
+            {
+                "id": 1,
+                "categori_id": 3,
+                "name": "Butter Cream Americano",
+                "description": "Fresh americano topped with creamy butter foam for a smooth and rich refreshing taste.",
+                "img": "../assets/fruity/butter-cream-americano.png",
+                "price": 34000,
+                "available": true,
+                "badges": [
+                    "popular"
+                ]
+            },
+            {
+                "id": 2,
+                "categori_id": 3,
+                "name": "Passion Fruit Coffee",
+                "description": "Cold coffee mixed with fresh passion fruit for a sweet, sour, and refreshing drink.",
+                "img": "../assets/fruity/passion-fruit-coffee.png",
+                "price": 35000,
+                "available": true,
+                "badges": []
+            },
+            {
+                "id": 3,
+                "categori_id": 3,
+                "name": "pomegranete wishkey coffee",
+                "description": "Sparkling coffee mixed with pomegranate flavor for a bold and fruity refreshment.",
+                "img": "../assets/fruity/pomegranete-wishkey-coffe.png",
+                "price": 39000,
+                "available": true,
+                "badges": [
+                    "limited"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "seasoning",
+        "sub": "Crafted Experiments",
+        "desc": "Where creativity meets flavor. Our seasoning series features bold and innovative combinations, blending unexpected ingredients into unique beverages that surprise and delight every palate.",
+        "categories": [
+            {
+                "id": 1,
+                "categori_id": 4,
+                "name": "Black Sessame Latte",
+                "description": "Creamy latte blended with roasted black sesame for a nutty and rich flavor.",
+                "img": "../assets/seasoning/black-sessame-latte.png",
+                "price": 36000,
+                "available": true,
+                "badges": [
+                    "limited"
+                ]
+            },
+            {
+                "id": 2,
+                "categori_id": 4,
+                "name": "Camaro Caramel Latte",
+                "description": "Smooth espresso mixed with sweet caramel and creamy milk for a soft and comforting taste.",
+                "img": "../assets/seasoning/camaro-caramel-latte.png",
+                "price": 34000,
+                "available": true,
+                "badges": [
+                    "limited"
+                ]
+            },
+            {
+                "id": 3,
+                "categori_id": 4,
+                "name": "Cotton Candy Cocoa",
+                "description": "Sweet chocolate drink with cotton candy flavor for a fun and unique dessert beverage.",
+                "img": "../assets/seasoning/cotton-candy-cocoa.png",
+                "price": 37000,
+                "available": true,
+                "badges": [
+                    "limited"
+                ]
+            },
+            {
+                "id": 4,
+                "categori_id": 4,
+                "name": "Raw Chesee Latte",
+                "description": "Creamy latte topped with soft cheese foam for a rich and savory-sweet flavor.",
+                "img": "../assets/seasoning/raw-cheese-latte.png",
+                "price": 38000,
+                "available": true,
+                "badges": [
+                    "limited"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "smoothies",
+        "sub": "Fresh & Creamy",
+        "desc": "Made from real fruits and blended to perfection, our smoothies offer a refreshing escape with every sip—smooth, creamy, and naturally satisfying.",
+        "categories": [
+            {
+                "id": 1,
+                "categori_id": 5,
+                "name": "Banana Smoothies",
+                "description": "Fresh banana blended with milk and ice for a creamy and refreshing drink.",
+                "img": "../assets/smoothies/banana.png",
+                "price": 30000,
+                "available": true,
+                "badges": []
+            },
+            {
+                "id": 2,
+                "categori_id": 5,
+                "name": "Blueberry Smoothies",
+                "description": "Sweet blueberry blended with milk for a smooth and refreshing fruity taste.",
+                "img": "../assets/smoothies/blueberry.png",
+                "price": 32000,
+                "available": true,
+                "badges": [
+                    "popular"
+                ]
+            },
+            {
+                "id": 3,
+                "categori_id": 5,
+                "name": "Cookies and Cream Smoothies",
+                "description": "Creamy milkshake blended with cookies for a sweet and rich dessert drink.",
+                "img": "../assets/smoothies/cokkies.png",
+                "price": 33000,
+                "available": true,
+                "badges": [
+                    "popular"
+                ]
+            },
+            {
+                "id": 4,
+                "categori_id": 5,
+                "name": "Dragonfruit Smoothies",
+                "description": "Fresh dragonfruit blended with ice for a light and refreshing tropical drink.",
+                "img": "../assets/smoothies/dragonfruit.png",
+                "price": 31000,
+                "available": true,
+                "badges": []
+            },
+            {
+                "id": 5,
+                "categori_id": 5,
+                "name": "Manggo Smoothies",
+                "description": "Sweet mango blended with milk for a thick and refreshing smoothie.",
+                "img": "../assets/smoothies/manggo.png",
+                "price": 31000,
+                "available": true,
+                "badges": []
+            },
+            {
+                "id": 6,
+                "categori_id": 5,
+                "name": "Melon Smoothies",
+                "description": "Fresh melon blended with milk and ice for a light and smooth drink.",
+                "img": "../assets/smoothies/melon.png",
+                "price": 30000,
+                "available": true,
+                "badges": []
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "cookies",
+        "sub": "Baked Delights",
+        "desc": "Freshly baked with premium ingredients, our cookies deliver the perfect balance of texture and flavor—crispy on the outside, soft on the inside, and irresistibly delicious.",
+        "categories": [
+            {
+                "id": 1,
+                "categori_id": 6,
+                "name": "Almond Cookies",
+                "description": "Crunchy cookies with roasted almond for a rich nutty flavor.",
+                "img": "../assets/cookies/almond.png",
+                "price": 28000,
+                "available": true,
+                "badges": [
+                    "new"
+                ]
+            },
+            {
+                "id": 2,
+                "categori_id": 6,
+                "name": "Cheese Cookies",
+                "description": "Soft cookies with cheesy flavor for a savory and sweet combination.",
+                "img": "../assets/cookies/chesse.png",
+                "price": 28000,
+                "available": true,
+                "badges": []
+            },
+            {
+                "id": 3,
+                "categori_id": 6,
+                "name": "Falaha cocolate Cookies",
+                "description": "Chocolate cookies with rich cocoa flavor for a sweet dessert snack.",
+                "img": "../assets/cookies/falaha-cocolate.png",
+                "price": 30000,
+                "available": true,
+                "badges": [
+                    "new"
+                ]
+            },
+            {
+                "id": 4,
+                "categori_id": 6,
+                "name": "Lottus Cookies",
+                "description": "Soft cookies with caramel biscuit flavor for a sweet and crunchy bite.",
+                "img": "../assets/cookies/lottus.png",
+                "price": 32000,
+                "available": true,
+                "badges": []
+            },
+            {
+                "id": 5,
+                "categori_id": 6,
+                "name": "Matcha Cookies",
+                "description": "Green tea cookies with soft texture and mild sweet flavor.",
+                "img": "../assets/cookies/matcha.png",
+                "price": 30000,
+                "available": true,
+                "badges": [
+                    "popular"
+                ]
+            },
+            {
+                "id": 6,
+                "categori_id": 6,
+                "name": "Medde Cookies",
+                "description": "Crunchy cookies with roasted cashew nuts for a rich taste.",
+                "img": "../assets/cookies/mede.png",
+                "price": 32000,
+                "available": true,
+                "badges": []
+            },
+            {
+                "id": 7,
+                "categori_id": 6,
+                "name": "Oreo Cookies",
+                "description": "Chocolate cookies mixed with Oreo pieces for a sweet dessert snack.",
+                "img": "../assets/cookies/oreo.png",
+                "price": 30000,
+                "available": true,
+                "badges": [
+                    "new"
+                ]
+            },
+            {
+                "id": 8,
+                "categori_id": 6,
+                "name": "Peanut Cookies",
+                "description": "Classic peanut cookies with crunchy texture and sweet taste.",
+                "img": "../assets/cookies/peanut.png",
+                "price": 30000,
+                "available": true,
+                "badges": []
+            },
+            {
+                "id": 9,
+                "categori_id": 6,
+                "name": "Almond Redvelvet Cookies",
+                "description": "Red velvet cookies topped with almond for a sweet and premium flavor.",
+                "img": "../assets/cookies/redvelvet-amond.png",
+                "price": 33000,
+                "available": true,
+                "badges": []
+            }
+        ]
+    }
+]

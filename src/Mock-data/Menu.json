@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "name": "Cappuccino",
+        "description": "Espresso with steamed milk foam",
+        "price": 28000,
+        "image": "/images/menu/cappuccino.jpg",
+        "category_id": 1,
+        "tag": "Best Seller",
+        "is_active": true
+    },
+    {
+        "id": 2,
+        "name": "Matcha Latte",
+        "description": "Premium Japanese matcha with milk",
+        "price": 32000,
+        "image": "/images/menu/matcha.jpg",
+        "category_id": 2,
+        "tag": "New",
+        "is_active": true
+    },
+    {
+        "id": 3,
+        "name": "Croissant",
+        "description": "Buttery French pastry",
+        "price": 22000,
+        "image": "/images/menu/croissant.jpg",
+        "category_id": 3,
+        "is_active": true
+    }
+]

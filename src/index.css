@@ -11,3 +11,111 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* =========================
+   CSS RESET
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =========================
+   DESIGN TOKENS
+========================= */
+:root {
+
+  /* Primary (Coffee Tone) */
+  --primary: #6F4E37;
+  --second-primary: #CF6D17;
+  --primary-dark: #4B3621;
+  --primary-soft: #8B6B5C;
+
+  /* Secondary (Spring Tone) */
+  --secondary: #A8C3A0;
+  --secondary-soft: #CFE3D8;
+  --secondary-dark: #8FA78A;
+
+  /* Background */
+  --bg-main: #F7F4EF;
+  --bg-section: #EFE7DC;
+  --bg-card: #FFFFFF;
+
+  /* Border  */
+  --border: #A0A0A0;
+  --border-soft: #ddd;
+  /* Accent */
+  --accent: #CF6D17;
+  --accent-soft: #E2A58B;
+
+  /* Text */
+  --text-primary: #2B2B2B;
+  --text-secondary: #6B6B6B;
+  --text-disabled: #A0A0A0;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+
+  /* Shadow */
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 12px 30px rgba(0, 0, 0, 0.08);
+  --shadow-primary: 0 8px 24px #cf6d179b;
+  --shadow-primary-white: 0 8px 24px #ffffff94;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* font  */
+  --text-desc: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --text-lora: 'Lora', serif;
+
+  /* button background color  */
+  --primary-btn: linear-gradient(135deg, #d97706, #ea580c);
+  --primary-btn-hover: linear-gradient(135deg, #ea580c, #d97706);
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1 {
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 16px;
+  color: var(--text-secondary);
+}
