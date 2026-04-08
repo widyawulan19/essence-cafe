@@ -1527,6 +1527,7 @@ MEDIA QUERY (BREAK POINT)
     .selection-box {
         /* border: 1px solid green; */
         width: 60%;
+        padding: 10px;
     }
 
     .selection-content {
@@ -1536,6 +1537,8 @@ MEDIA QUERY (BREAK POINT)
         align-items: center;
         justify-content: center;
     }
+
+
 
     /* =======================
     STORY CONTAINER

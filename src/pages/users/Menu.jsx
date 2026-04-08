@@ -5,7 +5,7 @@ import NavbarLanding from "../../components/NavbarLanding";
 import { IoCafe, IoSearchOutline } from "react-icons/io5";
 import { HiOutlinePlus, HiOutlineShoppingBag } from "react-icons/hi";
 import { LuIceCreamBowl } from "react-icons/lu";
-import { GiFruitBowl, GiSpiralBottle  } from "react-icons/gi";
+import { GiFruitBowl, GiHamburgerMenu, GiSpiralBottle  } from "react-icons/gi";
 import { RiDrinks2Line } from "react-icons/ri";
 import { TbCookieFilled } from "react-icons/tb";
 import ctaImg from '../../assets/cta-menu2.png'
@@ -24,6 +24,7 @@ function Menu({cart, setCart,showToast}) {
   const [openCart, setOpenCart] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [openProduk, setOpenProduk] = useState(null);
+  const [openBurger, setOpenBurger] = useState(false);
 
   console.log("cart data:", cart)
 
@@ -107,32 +108,50 @@ function Menu({cart, setCart,showToast}) {
     })
   }
 
+  const handleOpenBurger = () =>{
+    setOpenBurger(!openBurger)
+  }
+
 
 
   return (
     <div className="menu-container">
       <div className="menu-navbar-box">
-        <h4 
-          onClick={navigateToLanding}>
-            Landing Page
-        </h4>
+        <div className="menu-navbar1">
+          <h4 
+            onClick={navigateToLanding}>
+              Landing Page
+          </h4>
 
-        <img 
-          src={logo} 
-          alt="Logo pic" 
-          onClick={navigateToLanding}
-        />
+          <div className="menu-nav-icon" onClick={handleOpenBurger}>
+            <GiHamburgerMenu/>
+          </div>
 
-        <div className="cart-icon-icon">
-          <HiOutlineShoppingBag 
-            className="icon-cart"
-            onClick={handleOpenCart}
+          <img 
+            src={logo} 
+            alt="Logo pic" 
+            onClick={navigateToLanding}
           />
 
-          {totalQty > 0 && (
-            <span className="icon-badge">{totalQty}</span>
-          )}
+          <div className="cart-icon-icon">
+            <HiOutlineShoppingBag 
+              className="icon-cart"
+              onClick={handleOpenCart}
+            />
+
+            {totalQty > 0 && (
+              <span className="icon-badge">{totalQty}</span>
+            )}
+          </div>
         </div>
+
+        {openBurger && (
+          <div className="navbar-item">
+            <p>Landing Page</p>
+          </div>
+        )}
+       
+        
         
         {openCart && (
           <div className={`modal-cart ${isClosing ? "closing":""}`} onClick={closeCart}>
@@ -144,7 +163,7 @@ function Menu({cart, setCart,showToast}) {
       </div>
 
       {/* CATEGORY BUTTON */}
-      <div className="menu-navbar" style={{ marginBottom: "20px" }}>
+      <div className="menu-navbar">
         <div className="menu-btn">
           {menuData.map((cat) => (
             <button
@@ -158,13 +177,13 @@ function Menu({cart, setCart,showToast}) {
           ))}
         </div>
         <div className="menu-search">
-          <IoSearchOutline className="search-icon"/>
           <input 
             type="text" 
-            placeholder="Search our menu..."
+            placeholder="Search..."
             value={search}
             onChange={(e)=> setSearch(e.target.value)}
           />
+          <IoSearchOutline className="search-icon"/>
         </div>
 
       </div>
