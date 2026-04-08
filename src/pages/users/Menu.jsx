@@ -83,7 +83,7 @@ function Menu({cart, setCart,showToast}) {
   FUNGSI NAVIGASI
   ======================= */
   const navigateToLanding = () =>{
-    navigate('/landing-page')
+    navigate('/')
   }
 
   const handleOpenCart = () =>{

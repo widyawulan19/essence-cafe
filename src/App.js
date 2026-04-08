@@ -28,8 +28,8 @@ function App() {
       <Routes>
 
         {/* LANDING PAGE NO LAYOUT  */}
-        <Route path='/' />
-        <Route path='/landing-page' element={<LandingPage cart={cart} setCart={setCart} />} />
+        {/* <Route path='/' /> */}
+        <Route path='/' element={<LandingPage cart={cart} setCart={setCart} />} />
         <Route path='/menu' element={<Menu cart={cart} setCart={setCart} showToast={showToast} />} />
         <Route path='/cart' element={<Cart cart={cart} setCart={setCart} toasts={showToast} />} />
         <Route path='/checkout' element={<Checkout cart={cart} setCart={setCart} />} />
