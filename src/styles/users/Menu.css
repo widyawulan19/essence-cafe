@@ -869,4 +869,11 @@ RESPONSIFE MEDIA QUERY
         width: 90%;
         height: 90%;
     }
+
+    .cta-left .email-form {
+        width: 90%;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        /* border: 1px solid red; */
+    }
 }
