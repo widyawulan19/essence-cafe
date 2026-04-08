@@ -25,28 +25,29 @@ const FooterSection=()=> {
                 </p>
             </div>
 
-            
-            <div className="footer2" data-aos='fade-up' data-aos-delay='200'>
-                <h5>EXPLORE</h5>
-                <div className="menu">
-                    <p>Our Story</p>
-                    <p>Menu</p>
-                    <p>Locations</p>
-                    <p>Gallery</p>
+            <div className="footer2-box" data-aos='fade-up' data-aos-delay='200'>
+                <div className="footer2" >
+                    <h5>EXPLORE</h5>
+                    <div className="menu">
+                        <p>Our Story</p>
+                        <p>Menu</p>
+                        <p>Locations</p>
+                        <p>Gallery</p>
+                    </div>
+                </div>
+
+                <div className="footer2">
+                    <h5>SUPPORT</h5>
+                    <div className="menu">
+                        <p>Contact Us</p>
+                        <p>FAQs</p>
+                        <p>Privacy Policy</p>
+                        <p>Term Of Service</p>
+                    </div>
                 </div>
             </div>
 
-            <div className="footer2" data-aos='fade-up' data-aos-delay='200'>
-                <h5>SUPPORT</h5>
-                <div className="menu">
-                    <p>Contact Us</p>
-                    <p>FAQs</p>
-                    <p>Privacy Policy</p>
-                    <p>Term Of Service</p>
-                </div>
-            </div>
-
-            <div className="footer3" data-aos='fade-up' data-aos-delay='200'>
+            <div className="footer3" data-aos='fade-up'>
                 <h5>FOLLOW US</h5>
                 <div className="footer-icon">
                     <IoLogoInstagram/>
