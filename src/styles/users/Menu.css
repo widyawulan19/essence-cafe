@@ -874,6 +874,10 @@ RESPONSIFE MEDIA QUERY
         width: 90%;
         justify-content: space-between;
         margin-bottom: 30px;
+    }
+
+    .email-form input {
+        width: 80%;
         /* border: 1px solid red; */
     }
 }
