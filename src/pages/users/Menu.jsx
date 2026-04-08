@@ -147,7 +147,7 @@ function Menu({cart, setCart,showToast}) {
 
         {openBurger && (
           <div className="navbar-item">
-            <p>Landing Page</p>
+            <p onClick={navigateToLanding}>Landing Page</p>
           </div>
         )}
        

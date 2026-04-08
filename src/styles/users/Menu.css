@@ -880,4 +880,8 @@ RESPONSIFE MEDIA QUERY
         width: 80%;
         /* border: 1px solid red; */
     }
+
+    .navbar-item {
+        width: 50%;
+    }
 }
