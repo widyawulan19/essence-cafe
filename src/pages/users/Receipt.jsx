@@ -5,12 +5,12 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { BsQrCodeScan } from "react-icons/bs";
 import { IoPrint } from 'react-icons/io5';
 
-const Receipt = ({orderId, name, discount}) => {
+const Receipt = ({orderId, name, discount, totalPrice}) => {
     const location = useLocation();
     const {cart,totalQty} = location.state || {};
     const navigate = useNavigate();
 
-    console.log("discount:", discount);
+    console.log("total price:", totalPrice);
 
     const getCurrentDateTime = () =>{
         const now = new Date();
@@ -24,10 +24,10 @@ const Receipt = ({orderId, name, discount}) => {
         return now.toLocaleDateString(undefined, options);
     }
 
-    const totalPrice = cart.reduce(
-        (total, item) => total + item.price * item.qty,
-        0 
-    )||0;
+    // const totalPrice = cart.reduce(
+    //     (total, item) => total + item.totalPrice * item.qty,
+    //     0 
+    // )||0;
 
     const grandTotal = totalPrice - discount + 2000;
 
@@ -63,7 +63,7 @@ const Receipt = ({orderId, name, discount}) => {
             </div>
         </div>
 
-        <div className="receipt-detail">
+        {/* <div className="receipt-detail">
             <div className="order-row">
                 <span className='label-bold'>ITEM & QTY</span>
                 <span className='value-bold'>TOTAL</span>
@@ -73,9 +73,62 @@ const Receipt = ({orderId, name, discount}) => {
                 <div className="order-row" key={item.id}>
                     <div className="label-box">
                         <span className='label'>{item.name}</span>
-                        <span className='value'>{item.qty} x {item.price.toLocaleString("id-ID")}</span>
+                        <div className="receipt-note">
+                            {Object.entries(item.selectedOptions).map(([key, val]) => (
+                                <div key={key} className="option-box" style={{fontSize:'10px', color:'#CF6D17'}}>
+                                    <span className="option-title">{key}:</span>
+
+                                    <span className="option-value">
+                                    {Array.isArray(val)
+                                        ? val.map(v => `${v.name} (+Rp ${v.price.toLocaleString("id-ID")})`).join(", ")
+                                        : `${val.name} (+Rp ${val.price.toLocaleString("id-ID")})`}
+                                    </span>
+                                </div>
+                            ))}
+                        </div>
+                        
+                        <span className='value'>{item.qty} x {item.totalPrice.toLocaleString("id-ID")}</span>
                     </div>
-                    <span className='price-bold'>Rp {(item.price * item.qty).toLocaleString("id-ID")}</span>
+                    <span className='price-bold'>Rp {(item.totalPrice * item.qty).toLocaleString("id-ID")}</span>
+                </div>
+            ))}
+        </div> */}
+        <div className="receipt-detail">
+            <div className="order-header">
+                <span>ITEM & QTY</span>
+                <span>TOTAL</span>
+            </div>
+
+            {cart.map((item) => (
+                <div className="order-item" key={item.id}>
+
+                {/* TOP ROW */}
+                <div className="item-main">
+                    <span className="item-name">{item.name}</span>
+                    <span className="item-total">
+                    Rp {(item.totalPrice * item.qty).toLocaleString("id-ID")}
+                    </span>
+                </div>
+
+                {/* OPTIONS */}
+                <div className="item-options">
+                    {Object.entries(item.selectedOptions).map(([key, val]) => (
+                    <div key={key} className="option-row">
+                        <span className="option-key">{key}:</span>
+                        <span className="option-value">
+                        {Array.isArray(val)
+                            ? val.map(v => `${v.name}${v.price > 0 ? ` (+Rp ${v.price.toLocaleString("id-ID")})` : ""}`).join(", ")
+                            : `${val.name}${val.price > 0 ? ` (+Rp ${val.price.toLocaleString("id-ID")})` : ""}`}
+                        </span>
+                    </div>
+                    ))}
+                </div>
+
+                {/* QTY */}
+                <span className="item-qty">
+                    {item.qty} x Rp {item.totalPrice.toLocaleString("id-ID")}
+                </span>
+
                 </div>
             ))}
         </div>

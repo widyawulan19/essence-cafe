@@ -11,9 +11,9 @@ import Receipt from './Receipt';
 const Confirmation=()=> {
     const location = useLocation();
     const navigate = useNavigate()
-    const { name, whatsapp, pickupTime, orderId, pickupEstimate, pickup, discount } = location.state || {};
+    const { name, whatsapp, pickupTime, orderId, pickupEstimate, pickup, discount, totalPrice, cart } = location.state || {};
     const [openModal, setOpenModal] = useState(false);
-    console.log("discount:", discount);
+    console.log("data cart:",cart );
 
     /* =======================
     FUNGSI FORMAT WAKTU PICKUP
@@ -96,6 +96,8 @@ const Confirmation=()=> {
             pickupTime={pickupTime}
             name={name}
             discount={discount}
+            totalPrice={totalPrice}
+            cart={cart}
           />
         </div>
       )}

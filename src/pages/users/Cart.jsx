@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
-import '../../styles/users/Cart.css'
+import React, { useEffect, useState } from 'react'
+import '../../styles/users/NewCart.css'
+// import '../../styles/users/Cart.css'
 import { HiOutlineShoppingBag, HiXCircle } from "react-icons/hi";
 import { IoTrashOutline } from "react-icons/io5";
 import { getDiscount } from '../../utils/Voucer';
 import { IoArrowBackOutline } from "react-icons/io5";
 import { useToast } from '../../hook/useToast';
 import Toast from '../../components/Toast';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { FaMinus, FaPlus } from "react-icons/fa6";
 
 
@@ -17,6 +18,8 @@ const Cart = ({cart=[], setCart, onClose, isClosing}) => {
     const [pickupTime, setPickupTime] = useState("Now");
     const {toasts, showToast} = useToast();
     const navigate = useNavigate()
+    // const location = useLocation();
+
 
 
     const orderId = "#ORD" + Date.now();
@@ -57,9 +60,9 @@ const Cart = ({cart=[], setCart, onClose, isClosing}) => {
 
     //fungsi total price
     const totalPrice = cart.reduce(
-        (total, item) => total + item.price * item.qty,
+        (total, item) => total + (item.totalPrice || 0) * item.qty,
         0
-    )||0;
+    );
 
     //total qty
     const totalQty = cart.reduce(
@@ -73,7 +76,8 @@ const Cart = ({cart=[], setCart, onClose, isClosing}) => {
             state:{
                 discount:discount,
                 totalQty:totalQty,
-                orderId:orderId
+                orderId:orderId,
+                totalPrice:totalPrice,
             }
         });
     }
@@ -109,31 +113,42 @@ const Cart = ({cart=[], setCart, onClose, isClosing}) => {
                 <>
                     <div className="cart-item-box">
                         {cart.map((item)=>(
-                            <div key={item.id} className="cart-item">
+                            <div className="cart-item">
                                 <img src={item.img} alt={item.name} />
 
                                 <div className="cart-info">
                                     <h4>{item.name}</h4>
-                                    <p>Rp {item.price.toLocaleString()}</p>
-                                </div>
 
-                                <div className="qty-control">
-                                    <div className="remove">
-                                        <button
-                                            className='remove-btn' 
-                                            onClick={()=> removeItem(item.id)}
-                                        >
-                                            <IoTrashOutline/>
-                                        </button>
+                                    {/* OPTIONS */}
+                                    {Object.entries(item.selectedOptions).map(([key, val]) => (
+                                    <div key={key} className="option-box" style={{fontSize:'12px', color:'#CF6D17'}}>
+                                        <span className="option-title">{key}:</span>
+
+                                        <span className="option-value">
+                                        {Array.isArray(val)
+                                            ? val.map(v => `${v.name} (+Rp ${v.price.toLocaleString("id-ID")})`).join(", ")
+                                            : `${val.name} (+Rp ${val.price.toLocaleString("id-ID")})`}
+                                        </span>
                                     </div>
-                                    <div className="action">
-                                        <button onClick={()=> decreaseQty(item.id)}><FaMinus className='action-icon'/></button>
-                                        <span>{item.qty}</span>
-                                        <button onClick={() => increaseQty(item.id)}><FaPlus className='action-icon'/></button>
-                                    </div>        
+                                    ))}
                                 </div>
 
-                            
+                                {/* RIGHT SIDE */}
+                                <div className="cart-right-box">
+                                    <div className="btn-remove" onClick={() => removeItem(item.id)}>
+                                        <IoTrashOutline/>
+                                    </div>
+                                    <div className="qty-control">
+                                        <button>-</button>
+                                        <span>{item.qty}</span>
+                                        <button>+</button>
+                                    </div>
+
+                                    {/* 🔥 TOTAL PER ITEM */}
+                                    <p className="item-total">
+                                    Rp {(item.totalPrice * item.qty).toLocaleString("id-ID")}
+                                    </p>
+                                </div>
                             </div>
                         ))}
                     </div>

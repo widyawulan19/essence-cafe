@@ -25,7 +25,7 @@ const Checkout=({cart,setCart})=> {
     }
 
     const totalPrice = cart.reduce(
-        (total, item) => total + item.price * item.qty,
+        (total, item) => total + item.totalPrice * item.qty,
          0
     )||0;
 
@@ -49,7 +49,8 @@ const Checkout=({cart,setCart})=> {
                 pickup: getPickupEstimate(),
                 totalQty,
                 cart,
-                discount
+                discount,
+                totalPrice
             }
         })
     }
@@ -172,12 +173,24 @@ const Checkout=({cart,setCart})=> {
                                     <div className="content-info">
                                         <h4>{item.name}</h4>
                                         <span>Qty: {item.qty}</span>
+                                         {/* OPTIONS */}
+                                        {Object.entries(item.selectedOptions).map(([key, val]) => (
+                                            <div key={key} className="option-box" style={{fontSize:'12px', color:'#CF6D17'}}>
+                                                <span className="option-title">{key}:</span>
+
+                                                <span className="option-value">
+                                                {Array.isArray(val)
+                                                    ? val.map(v => `${v.name} (+Rp ${v.price.toLocaleString("id-ID")})`).join(", ")
+                                                    : `${val.name} (+Rp ${val.price.toLocaleString("id-ID")})`}
+                                                </span>
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
                                 
 
                                 <div className="content-qty">
-                                    <p>{item.price.toLocaleString("id-ID")}</p>
+                                    <p>{item.totalPrice.toLocaleString("id-ID")}</p>
                                 </div>
                             </div>
                         ))}

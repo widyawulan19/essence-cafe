@@ -222,13 +222,14 @@ CONTENT RIGHT (ORDER SUMMARY)
     display: flex;
     flex-direction: column;
     width: 60%;
-    height: 95%;
+    /* height: 100%; */
 }
 
 .content-box {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
+    justify-content: space-between;
     gap: 10px;
     /* border: 1px solid blue; */
 }
@@ -290,8 +291,8 @@ CONTENT RIGHT (ORDER SUMMARY)
 }
 
 .content-box img {
-    width: 40px;
-    height: 50px;
+    width: 70px;
+    height: 80px;
 }
 
 .content-info {
@@ -303,7 +304,7 @@ CONTENT RIGHT (ORDER SUMMARY)
     font-family: "Lora", serif;
     font-weight: 600;
     font-size: 14px;
-    font-style: normal;
+    /* font-style: normal; */
     font-optical-sizing: auto;
     margin: 0px;
     padding: 0px;
@@ -335,13 +336,12 @@ BOX DETAIL PRICE
     justify-content: space-between;
     gap: 10px;
     margin-top: auto;
-    /* border: 1px solid blue; */
     width: 100%;
 }
 
 .detail-label p {
     font-family: var(--text-desc);
-    font-size: 14px;
+    font-size: 12px;
     font-weight: normal;
     color: var(--text-primary);
 }
@@ -358,9 +358,11 @@ BOX DETAIL PRICE
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-    padding: 10px 0px;
+    padding: 5px 0px;
+    padding-bottom: 0;
     border-top: 1px solid var(--border-soft);
     width: 100%;
+    /* border: 1px solid red; */
 }
 
 .final-total p {
@@ -379,8 +381,8 @@ BOX DETAIL PRICE
 .order-btn {
     background: linear-gradient(135deg, #d97706, #ea580c);
     border-radius: 999px;
-    padding: 16px 30px;
-    font-size: 18px;
+    padding: 10px 30px;
+    font-size: 15px;
     font-weight: 600;
 
     display: flex;

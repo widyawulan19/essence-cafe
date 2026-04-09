@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react'
 import '../../styles/users/ModalProduk.css'
 import { HiOutlineX } from 'react-icons/hi';
 
-const ModalProduk = ({product,sectionName,optionsData, onClose, addToCart}) => {
+const ModalProduk = ({product,sectionName,optionsData, onClose, cart, setCart,showToast}) => {
     const [selectedOptions, setSelectedOptions] = useState({});
 
     // filter options sesuai kategori produk 
@@ -56,18 +56,40 @@ const ModalProduk = ({product,sectionName,optionsData, onClose, addToCart}) => {
     }, [selectedOptions, product.price]);
 
 
-      // 🛒 Add to cart
-  const handleAddToCart = () => {
-    const newItem = {
-      ...product,
-      quantity: 1,
-      selectedOptions,
-      totalPrice
+    const handleAddToCart = () => {
+      const newItem = {
+        id: product.id,
+        name: product.name,
+        img: product.img,
+        basePrice: product.price,
+        selectedOptions,
+        totalPrice, // 🔥 INI YANG PENTING
+        qty: 1
+      };
+
+      addToCart(newItem);
+      onClose();
     };
 
-    addToCart(newItem);
-    onClose();
-  };
+    const addToCart = (newItem) => {
+      const exist = cart.find(item =>
+        item.id === newItem.id &&
+        JSON.stringify(item.selectedOptions) === JSON.stringify(newItem.selectedOptions)
+      );
+
+      if (exist) {
+        setCart(cart.map(item =>
+          item.id === newItem.id &&
+          JSON.stringify(item.selectedOptions) === JSON.stringify(newItem.selectedOptions)
+            ? { ...item, qty: item.qty + 1 }
+            : item
+        ));
+      } else {
+        setCart([...cart, newItem]);
+      }
+
+      showToast(`${newItem.name} added to cart 🛒`);
+    };
 
    
   return (
@@ -130,7 +152,7 @@ const ModalProduk = ({product,sectionName,optionsData, onClose, addToCart}) => {
         <div className="modal-footer">
           <h3>Total: Rp {totalPrice.toLocaleString("id-ID")}</h3>
 
-          <button className="add-btn" onClick={handleAddToCart}>
+          <button className="add-btn" onClick={() => handleAddToCart()}>
             Add to Cart
           </button>
         </div>

@@ -86,16 +86,86 @@ RECEIPT CONTENT
     font-size: 14px;
 }
 
+.receipt-note {
+    border: 1px blue;
+}
+
 /* =======================
 RECEIPT DETAILS
 ======================= */
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.order-item {
+    padding: 12px 0;
+    border-bottom: 1px dashed #e0d7cf;
+}
+
+/* TOP ROW */
+.item-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-name {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.item-total {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* OPTIONS */
+.item-options {
+    margin-top: 6px;
+    padding-left: 6px;
+}
+
+.option-row {
+    font-size: 12px;
+    color: #c26100;
+    margin-top: 2px;
+}
+
+.option-key {
+    font-weight: 500;
+}
+
+.option-value {
+    margin-left: 4px;
+}
+
+/* QTY */
+.item-qty {
+    font-size: 11px;
+    color: #777;
+    margin-top: 4px;
+    display: block;
+}
+
+/* =======================
+DETAIL
+======================= */
+
 .receipt-detail {
     display: flex;
     flex-direction: column;
     gap: 5px;
     padding: 15px 0px;
-    padding-bottom: 25px;
+    padding-bottom: 0px;
     border-bottom: 1px solid #dfb496;
+    /* border: 1px solid red; */
+    height: 45vh;
+    overflow-y: auto;
+    position: relative;
 }
 
 .label-bold,

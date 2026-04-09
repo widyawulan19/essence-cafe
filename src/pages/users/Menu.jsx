@@ -196,42 +196,6 @@ function Menu({cart, setCart,showToast}) {
       </div>
       
 
-      {/* MENU LIST */}
-      {/* <div className="menu-list">
-        {filteredMenu?.map((item) => (
-          <div key={item.id} className="menu-card">
-            
-            <div className="menu-cover">
-              <img src={item.img} alt={item.name} />
-
-              {item.badges?.length > 0 &&(
-                <div className="badge-container">
-                  {item.badges.map((badge,index) =>(
-                    <span key={index} className={`badge ${badge}`}>
-                      {bagesLabel[badge]}
-                    </span>
-                  ))}
-                </div>
-              )}
-             
-            </div>
-
-            <div className="menu-desc">
-              <div className="desc-title">
-                 <h3>{item.name}</h3>
-                <p>Rp {item.price.toLocaleString()}</p>
-              </div>
-              <p className="desc-p">{item.description}</p>
-              <button onClick={()=>handleOpenModal(item, selectedCategory)}>
-                Add
-                <HiOutlinePlus/>
-              </button>
-            </div>
-
-          </div>
-        ))}
-      </div> */}
-
       {/* EXAMPLE MENU LIST  */}
       <div className="menu-list">
         {filteredMenu?.map((item) => (
@@ -290,7 +254,9 @@ function Menu({cart, setCart,showToast}) {
           sectionName={openProduk.sectionName}
           optionsData={optionsData} // ⬅️ IMPORT nanti
           onClose={() => setOpenProduk(null)}
-          addToCart={addToCart}
+          cart={cart}
+          setCart={setCart}
+          showToast={showToast}
         />
       )}
 
