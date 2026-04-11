@@ -77,7 +77,7 @@ function NavbarLanding({cart,setCart}) {
           </Link>
           {openCart && (
              <div className={`cart-modal ${isClosing ? "closing": ""}`} onClick={closeModalCart} >
-              <div onClick={(e) => e.stopPropagation()}>
+              <div onClick={(e) => e.stopPropagation()} className='landing-cart-modal'>
                 <Cart cart={cart} setCart={setCart} onClose={closeModalCart} isClosing={isClosing} />
               </div>
             </div>

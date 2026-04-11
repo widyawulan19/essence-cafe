@@ -74,7 +74,7 @@ const Checkout=({cart,setCart})=> {
                 </div>
 
                 <div className="text">
-                    <h4>Your Details</h4>
+                    <h4>Your Order Details</h4>
                     <p>Please provide your contact information for the order.</p>
                 </div>
                 

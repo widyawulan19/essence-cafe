@@ -661,10 +661,18 @@ RESPONSIFE MEDIA QUERY
 @media (max-width: 1200px) {}
 
 /* Laptop */
-@media (max-width: 992px) {}
+@media (max-width: 992px) {
+    .modal-cart>* {
+        width: 55%;
+    }
+}
 
 /* Tablet */
 @media (max-width: 768px) {
+    .modal-cart>* {
+        width: 65%;
+    }
+
     .menu-navbar1 {
         padding: 10px 40px;
     }
@@ -687,6 +695,10 @@ RESPONSIFE MEDIA QUERY
 
 /* Mobile Large */
 @media (max-width: 576px) {
+    .modal-cart>* {
+        width: 75%;
+    }
+
     .menu-navbar1 {
         padding: 10px 20px;
     }
@@ -771,6 +783,10 @@ RESPONSIFE MEDIA QUERY
 
 /* Mobile Small */
 @media (max-width: 400px) {
+    .modal-cart>* {
+        width: 100%;
+    }
+
     .menu-navbar1 {
         padding: 10px 20px;
     }

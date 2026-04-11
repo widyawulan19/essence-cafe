@@ -1,14 +1,12 @@
 .receipt-container {
-    /* border: 1px solid red; */
-    /* display: flex; */
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
+    padding: 10px 15px;
     background-color: #FBEFDF;
 
     width: 30%;
-    height: 100%;
+    height: fit-content;
     border-radius: 8px;
 }
 
@@ -102,7 +100,7 @@ RECEIPT DETAILS
 }
 
 .order-item {
-    padding: 12px 0;
+    padding: 5px 0;
     border-bottom: 1px dashed #e0d7cf;
 }
 
@@ -116,6 +114,8 @@ RECEIPT DETAILS
 .item-name {
     font-weight: 600;
     font-size: 15px;
+    margin: 0px;
+    padding: 0px;
 }
 
 .item-total {
@@ -159,11 +159,11 @@ DETAIL
     display: flex;
     flex-direction: column;
     gap: 5px;
-    padding: 15px 0px;
+    padding: 5px 0px;
     padding-bottom: 0px;
     border-bottom: 1px solid #dfb496;
     /* border: 1px solid red; */
-    height: 45vh;
+    height: 40vh;
     overflow-y: auto;
     position: relative;
 }
@@ -216,7 +216,7 @@ RECEIPT TOTAL
 }
 
 .order-row .voucer {
-    color: red;
+    color: green;
 }
 
 /* =======================
@@ -236,6 +236,7 @@ GRANDTOTAL
     width: 90%;
     padding: 10px 20px;
     border-radius: 6px;
+    border: 1px solid var(--accent);
     /* border: 1px solid #ffffff78; */
     background-color: #ffffff78;
 
@@ -337,4 +338,28 @@ RECEIPT BTN
 
 .receipt-btn button:hover {
     background: var(--primary-btn-hover);
+}
+
+@media (max-width:992px) {
+    .receipt-container {
+        width: 40%;
+    }
+}
+
+@media (max-width:768px) {
+    .receipt-container {
+        width: 50%;
+    }
+}
+
+@media (max-width:578px) {
+    .receipt-container {
+        width: 60%;
+    }
+}
+
+@media (max-width:400px) {
+    .receipt-container {
+        width: 95%;
+    }
 }

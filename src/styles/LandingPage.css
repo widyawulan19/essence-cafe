@@ -23,7 +23,7 @@
     width: 40%;
     height: 100%;
 
-    background: #fff;
+    /* background: #fff; */
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
@@ -60,6 +60,14 @@
     to {
         transform: translateX(0);
     }
+}
+
+.landing-cart-modal {
+    /* border: 1px solid red; */
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    font-family: var(--text-desc);
 }
 
 .landing-container {
@@ -1276,9 +1284,10 @@ MEDIA QUERY (BREAK POINT)
 
 /* Large Desktop */
 @media (max-width: 1200px) {
-    .cart-modal>* {
-        width: 50%;
+    .landing-cart-modal {
+        width: 45%;
     }
+
 
     .hero-container {
         height: 95vh;
@@ -1301,7 +1310,7 @@ MEDIA QUERY (BREAK POINT)
 /* Laptop */
 @media (max-width: 992px) {
 
-    .cart-modal>* {
+    .landing-cart-modal {
         width: 60%;
     }
 
@@ -1381,6 +1390,10 @@ MEDIA QUERY (BREAK POINT)
 
 /* Tablet */
 @media (max-width: 768px) {
+
+    .landing-cart-modal {
+        width: 65%;
+    }
 
     /* =======================
     SELECTION SECTION
@@ -1503,6 +1516,9 @@ MEDIA QUERY (BREAK POINT)
 
 /* Mobile Large */
 @media (max-width: 576px) {
+    .landing-cart-modal {
+        width: 80%;
+    }
 
     /* =======================
     HERO LANDING
@@ -1711,6 +1727,12 @@ MEDIA QUERY (BREAK POINT)
 
 /* Mobile Small */
 @media (max-width: 400px) {
+
+
+    .landing-cart-modal {
+        border-radius: 4px;
+        width: 100%;
+    }
 
     /* =======================
     HERO LANDING

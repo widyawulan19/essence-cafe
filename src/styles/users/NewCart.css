@@ -349,3 +349,13 @@ BUTTONS
 .continue-btn:hover {
     background: #f5f5f5;
 }
+
+/* =======================
+MEDIA QUERY
+======================= */
+
+@media (max-width:400px) {
+    .cart-container {
+        border-radius: 4px;
+    }
+}

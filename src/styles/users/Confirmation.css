@@ -30,6 +30,7 @@
     background-color: white;
 
     text-align: center;
+    /* border: 1px solid red; */
 }
 
 .confir-icon {
@@ -94,6 +95,7 @@ CONFIR TEXT
     justify-content: center;
     gap: 20px;
     width: 100%;
+    /* border: 1px solid blue; */
 }
 
 .confir-info button {
@@ -185,10 +187,75 @@ MODAL RECEIPT
     z-index: 999;
 
     width: 100%;
-    /* height: 100%; */
+    height: 100%;
     background-color: #00000084;
-    padding: 30px;
+    padding: 10px;
 
     display: flex;
     justify-content: center;
+}
+
+/* =======================
+MEDIA QUERY
+======================= */
+@media (max-width:992px) {
+    .confir-info button {
+        width: 20vw;
+    }
+}
+
+@media (max-width:768px) {
+    .confir-info button {
+        width: 23vw;
+    }
+}
+
+@media (max-width:576px) {
+
+    .confir-main {
+        height: 100vh;
+    }
+
+    .confir-info button {
+        width: 28vw;
+    }
+
+    .confir-text .text-p {
+        width: 80%;
+    }
+
+    .confir-btn button {
+        width: 90%;
+    }
+
+}
+
+@media (max-width:400px) {
+
+    .confir-main {
+        height: 100vh;
+        padding: 70px 40px;
+    }
+
+    .confir-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .confir-info button {
+        width: 100%;
+    }
+
+    .confir-text .text-p {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .confir-btn button {
+        width: 90%;
+    }
+
 }
