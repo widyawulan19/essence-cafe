@@ -100,9 +100,9 @@ function NavbarLanding({cart,setCart}) {
       {menuOpen && (
         <div className="mobile-menu">
           <Link to="/">Home</Link>
-          <Link to="/pricing">Menu</Link>
-          <Link>Gallery</Link>
-          <Link>Location</Link>
+          <Link to="/menu">Menu</Link>
+          {/* <Link>Gallery</Link>
+          <Link>Location</Link> */}
           <Link
             onClick={handleOpenModalCart}
           >
