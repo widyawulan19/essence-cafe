@@ -107,9 +107,9 @@ function NavbarLanding({cart,setCart}) {
             onClick={handleOpenModalCart}
           >
             Cart
-            {totalQty > 0 && (
+            {/* {totalQty > 0 && (
               <span className='cart-badge'>{totalQty}</span>
-            )}
+            )} */}
           </Link>
 
           {openCartBurger && (

@@ -168,23 +168,39 @@ const Checkout=({cart,setCart})=> {
                         {cart.map((item)=>(
                             <div key={item.id} className="main-box">
                                 <div className="box-left">
-                                    <img src={item.img} alt={item.name} />
+                                    <div className="top-check">
+                                        <img src={item.img} alt={item.name} />
 
-                                    <div className="content-info">
-                                        <h4>{item.name}</h4>
-                                        <span>Qty: {item.qty}</span>
+                                        <div className="content-info">
+                                            <h4>{item.name}</h4>
+                                            <span>Qty: {item.qty} * {item.basePrice.toLocaleString("id-ID")}</span>
+                                           
+                                        </div>
+                                    </div>
+                                    <div className="btm-check">
                                          {/* OPTIONS */}
-                                        {Object.entries(item.selectedOptions).map(([key, val]) => (
-                                            <div key={key} className="option-box" style={{fontSize:'12px', color:'#CF6D17'}}>
-                                                <span className="option-title">{key}:</span>
+                                         <h4>Additional</h4>
+                                            {Object.entries(item.selectedOptions).map(([key, val]) => {
+                                                const filtered = Array.isArray(val)
+                                                    ? val.filter(v => v.price > 0)
+                                                    : val.price > 0 ? val : null;
 
-                                                <span className="option-value">
-                                                {Array.isArray(val)
-                                                    ? val.map(v => `${v.name} (+Rp ${v.price.toLocaleString("id-ID")})`).join(", ")
-                                                    : `${val.name} (+Rp ${val.price.toLocaleString("id-ID")})`}
-                                                </span>
-                                            </div>
-                                        ))}
+                                                if (!filtered || (Array.isArray(filtered) && filtered.length === 0)) {
+                                                    return null;
+                                                }
+
+                                                return (
+                                                    <div key={key} className="option-box">
+                                                    <span className="option-title">{key}:</span>
+
+                                                    <span className="option-value">
+                                                        {Array.isArray(filtered)
+                                                        ? filtered.map(v => `${v.name} (+Rp ${v.price.toLocaleString("id-ID")})`).join(", ")
+                                                        : `${filtered.name} (+Rp ${filtered.price.toLocaleString("id-ID")})`}
+                                                    </span>
+                                                    </div>
+                                                );
+                                            })}
                                     </div>
                                 </div>
                                 

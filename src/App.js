@@ -13,6 +13,7 @@ import Checkout from './pages/users/Checkout';
 import Confirmation from './pages/users/Confirmation';
 import AOS from 'aos'
 import 'aos/dist/aos.css';
+import ScrollToTop from './hook/ScrollToTop';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
     <BrowserRouter>
 
       {/* GLOBAL TOAST  */}
+      <ScrollToTop />
       <Toast toasts={toasts} />
       <Routes>
 

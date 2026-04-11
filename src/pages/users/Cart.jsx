@@ -118,19 +118,30 @@ const Cart = ({cart=[], setCart, onClose, isClosing}) => {
 
                                 <div className="cart-info">
                                     <h4>{item.name}</h4>
+                                    <span>Qty: {item.qty} * {item.basePrice}</span>
 
                                     {/* OPTIONS */}
-                                    {Object.entries(item.selectedOptions).map(([key, val]) => (
-                                    <div key={key} className="option-box" style={{fontSize:'12px', color:'#CF6D17'}}>
-                                        <span className="option-title">{key}:</span>
+                                    {Object.entries(item.selectedOptions).map(([key, val]) => {
+                                        const filtered = Array.isArray(val)
+                                            ? val.filter(v => v.price > 0)
+                                            : val.price > 0 ? val : null;
 
-                                        <span className="option-value">
-                                        {Array.isArray(val)
-                                            ? val.map(v => `${v.name} (+Rp ${v.price.toLocaleString("id-ID")})`).join(", ")
-                                            : `${val.name} (+Rp ${val.price.toLocaleString("id-ID")})`}
-                                        </span>
-                                    </div>
-                                    ))}
+                                            if(!filtered || (Array.isArray(filtered) && filtered.length === 0)){
+                                                return null;
+                                            }
+
+                                            return(
+                                                <div key={key} className="option-box" style={{fontSize:'12px', color:'#CF6D17'}}>
+                                                    <span className="option-title">{key}:</span>
+
+                                                    <span className="option-value">
+                                                    {Array.isArray(val)
+                                                        ? val.map(v => `${v.name} (+Rp ${v.price.toLocaleString("id-ID")})`).join(", ")
+                                                        : `${val.name} (+Rp ${val.price.toLocaleString("id-ID")})`}
+                                                    </span>
+                                                </div>
+                                            );
+                                    })}
                                 </div>
 
                                 {/* RIGHT SIDE */}
@@ -139,9 +150,9 @@ const Cart = ({cart=[], setCart, onClose, isClosing}) => {
                                         <IoTrashOutline/>
                                     </div>
                                     <div className="qty-control">
-                                        <button>-</button>
+                                        <button onClick={() => decreaseQty(item.id)}>-</button>
                                         <span>{item.qty}</span>
-                                        <button>+</button>
+                                        <button onClick={() => increaseQty(item.id)}>+</button>
                                     </div>
 
                                     {/* 🔥 TOTAL PER ITEM */}

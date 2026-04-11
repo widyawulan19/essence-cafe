@@ -63,36 +63,7 @@ const Receipt = ({orderId, name, discount, totalPrice}) => {
             </div>
         </div>
 
-        {/* <div className="receipt-detail">
-            <div className="order-row">
-                <span className='label-bold'>ITEM & QTY</span>
-                <span className='value-bold'>TOTAL</span>
-            </div>
 
-            {cart.map((item)=>(
-                <div className="order-row" key={item.id}>
-                    <div className="label-box">
-                        <span className='label'>{item.name}</span>
-                        <div className="receipt-note">
-                            {Object.entries(item.selectedOptions).map(([key, val]) => (
-                                <div key={key} className="option-box" style={{fontSize:'10px', color:'#CF6D17'}}>
-                                    <span className="option-title">{key}:</span>
-
-                                    <span className="option-value">
-                                    {Array.isArray(val)
-                                        ? val.map(v => `${v.name} (+Rp ${v.price.toLocaleString("id-ID")})`).join(", ")
-                                        : `${val.name} (+Rp ${val.price.toLocaleString("id-ID")})`}
-                                    </span>
-                                </div>
-                            ))}
-                        </div>
-                        
-                        <span className='value'>{item.qty} x {item.totalPrice.toLocaleString("id-ID")}</span>
-                    </div>
-                    <span className='price-bold'>Rp {(item.totalPrice * item.qty).toLocaleString("id-ID")}</span>
-                </div>
-            ))}
-        </div> */}
         <div className="receipt-detail">
             <div className="order-header">
                 <span>ITEM & QTY</span>
@@ -112,16 +83,26 @@ const Receipt = ({orderId, name, discount, totalPrice}) => {
 
                 {/* OPTIONS */}
                 <div className="item-options">
-                    {Object.entries(item.selectedOptions).map(([key, val]) => (
-                    <div key={key} className="option-row">
-                        <span className="option-key">{key}:</span>
-                        <span className="option-value">
-                        {Array.isArray(val)
-                            ? val.map(v => `${v.name}${v.price > 0 ? ` (+Rp ${v.price.toLocaleString("id-ID")})` : ""}`).join(", ")
-                            : `${val.name}${val.price > 0 ? ` (+Rp ${val.price.toLocaleString("id-ID")})` : ""}`}
-                        </span>
-                    </div>
-                    ))}
+                    {Object.entries(item.selectedOptions).map(([key, val]) => {
+                        const filtered = Array.isArray(val)
+                            ? val.filter(v => v.price > 0)
+                            : val.price > 0 ? val : null;
+
+                        if (!filtered || (Array.isArray(filtered) && filtered.length === 0)) {
+                            return null;
+                        }
+                        
+                        return(
+                            <div key={key} className="option-row">
+                                <span className="option-key">{key}:</span>
+                                <span className="option-value">
+                                {Array.isArray(val)
+                                    ? val.map(v => `${v.name}${v.price > 0 ? ` (+Rp ${v.price.toLocaleString("id-ID")})` : ""}`).join(", ")
+                                    : `${val.name}${val.price > 0 ? ` (+Rp ${val.price.toLocaleString("id-ID")})` : ""}`}
+                                </span>
+                            </div>
+                        )
+                    })}
                 </div>
 
                 {/* QTY */}

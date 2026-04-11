@@ -171,6 +171,11 @@ ITEM LIST
     font-size: 14px;
 }
 
+.cart-info span {
+    margin: 0px;
+    font-size: 12px;
+}
+
 .cart-info p {
     margin: 4px 0 0;
     font-size: 13px;
