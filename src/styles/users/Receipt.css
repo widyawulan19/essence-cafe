@@ -354,7 +354,13 @@ RECEIPT BTN
 
 @media (max-width:578px) {
     .receipt-container {
-        width: 60%;
+        width: 80%;
+    }
+
+    .receipt-btn button {
+        margin-bottom: 20px;
+        padding: 15px;
+        font-size: 18px;
     }
 }
 
@@ -362,4 +368,6 @@ RECEIPT BTN
     .receipt-container {
         width: 95%;
     }
+
+
 }

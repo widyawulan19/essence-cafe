@@ -552,6 +552,7 @@ FOOTER
 EXAMPLE CARD
 ======================= */
 .menu-card-example {
+    /* border: 1px solid blue; */
     border: 0.5px solid #eee;
     border-radius: 20px;
     display: flex;
@@ -768,6 +769,26 @@ RESPONSIFE MEDIA QUERY
         overflow-x: auto;
         width: 100%;
         justify-content: flex-start;
+        /* border: 1px solid blue; */
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 15px 20px;
+    }
+
+    .menu-search {
+        padding: 4px;
+        width: 100%;
+    }
+
+    .menu-search input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .search-icon {
+        font-size: 30px;
     }
 
     .menu-cta .cta-img {
@@ -778,6 +799,18 @@ RESPONSIFE MEDIA QUERY
     .cta-img img {
         width: 90%;
         height: 90%;
+    }
+
+    .menu-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+
+    .menu-btm button {
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-size: 16px;
     }
 }
 
@@ -875,6 +908,12 @@ RESPONSIFE MEDIA QUERY
         overflow-x: auto;
         width: 100%;
         justify-content: flex-start;
+    }
+
+
+    .btn {
+        font-size: 14px;
+        padding: 15px 20px;
     }
 
     .menu-cta .cta-img {

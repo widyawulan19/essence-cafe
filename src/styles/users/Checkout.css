@@ -504,12 +504,17 @@ MEDIA QUERRY
 
     .content-right {
         order: 2;
-        width: 80%;
+        width: 90%;
     }
 
     .content-left {
         order: 1;
         width: 100%;
+    }
+
+    .order-btn {
+        font-size: 18px;
+        padding: 15px 30px;
     }
 }
 
